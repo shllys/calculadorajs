@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
+* {
+    font-family: 'League Spartan', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #384664;
+}
+
+body.active1 {
+    background-color: hsl(0, 0%, 90%);
+
+    .header {
+        h1 {
+            color: #1b1f32;
+        }
+
+        p {
+            color: #1b1f32;
+        }
+
+        .switch-button {
+            background-color: hsl(0, 5%, 81%);
+        }
+    }
+
+    .display {
+        background-color:  hsl(0, 0%, 98%);
+        color: #1b1f32;
+    }
+
+    .botones {
+        background-color: hsl(0, 5%, 81%);
+
+        .btn-number {
+            background-color: hsl(45, 7%, 89%);
+            border-bottom: 2px solid hsl(35, 11%, 61%);
+
+            &:hover {
+                background-color: hsl(40, 20%, 97%);
+            }
+        }
+
+        #clear {
+            background-color: hsl(185, 42%, 37%);
+            border-bottom: 2px solid hsl(185, 58%, 25%);
+
+            &:hover {
+                background-color: hsl(185, 50%, 53%);
+            }
+        }
+
+        .next-buttom {
+            background-color:  hsl(0, 5%, 81%);
+
+            .reset {
+                background-color: hsl(185, 42%, 37%);
+                border-bottom: 2px solid hsl(185, 58%, 25%);
+
+                &:hover {
+                    background-color: hsl(185, 50%, 53%);
+                }
+            }
+
+            .igual {
+                background-color: hsl(25, 98%, 40%);
+                border-bottom: 2px solid hsl(25, 99%, 27%);
+
+                &:hover {
+                    background-color: hsl(25, 83%, 54%);
+                }
+            }
+        }
+    }
+}
+
+body.active2 {
+    background-color: hsl(268, 75%, 9%);
+
+    .header {
+        h1 {
+            color: hsl(52, 100%, 62%);
+        }
+
+        p {
+            color: hsl(52, 100%, 62%);
+        }
+
+        .switch-button {
+            background-color: hsl(268, 47%, 21%);
+        }
+    }
+
+    .display {
+        background-color:  hsl(268, 47%, 21%);
+        color: hsl(52, 100%, 62%);
+    }
+
+    .botones {
+        background-color: hsl(268, 47%, 21%);
+
+        .btn-number {
+            background-color: hsl(281, 89%, 26%);
+            border-bottom: 2px solid hsl(285, 91%, 52%);
+            color: hsl(52, 100%, 62%);
+
+            &:hover {
+                background-color: hsl(281, 86%, 41%);
+            }
+        }
+
+        #clear {
+            background-color: hsl(290, 70%, 36%);
+            border-bottom: 2px solid hsl(285, 91%, 52%);
+
+            &:hover {
+                background-color: hsl(290, 69%, 44%);
+            }
+        }
+
+        .next-buttom {
+            background-color:  hsl(268, 47%, 21%);
+
+            .reset {
+                background-color: hsl(290, 70%, 36%);
+                border-bottom: 2px solid hsl(285, 91%, 52%);
+
+                &:hover {
+                    background-color: hsl(290, 69%, 44%);
+                }
+            }
+
+            .igual {
+                background-color: hsl(176, 100%, 44%);
+                border-bottom: 2px solid hsl(177, 92%, 70%);
+
+                &:hover {
+                    background-color: hsl(176, 100%, 73%);
+                }
+            }
+        }
+    }
+}
+
+
+.header {
+    padding: 1rem 0;
+    padding-bottom: .3rem;
+
+    h1{
+        font-weight: 700;
+        color: #fff;
+    }
+}
+
+.toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.boton {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+
+    p {
+        float: right;
+        font-weight: 700;
+        color: #fff;
+        margin-right: .5rem;
+    }
+
+    .switch-button {
+        padding: .7rem .3rem;
+        background-color: #252d44;
+        border-radius: 30px;
+        display: flex;
+        width: 4em;
+        height: 100%;
+        position: relative;
+
+        #circle {
+            background-color: #d13f3d;
+            position: absolute;
+            top: 3.1px;
+            left: 4px;
+            padding: .5rem;
+            border-radius: 30px;
+            display: flex;
+            justify-content: flex-start;
+            z-index: 1;
+        }
+    }
+}
+
+.num {
+    display: flex;
+    justify-content: flex-end;
+    
+    p {
+        margin: 0 7px;
+        color: #fff;
+        cursor: pointer;
+    }
+}
+
+.display {
+    background-color: #1b1f32;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 800;
+    font-size: 2rem;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.botones {
+    background: #252d44;
+    padding: 20px;
+    border-radius: 3%;
+    
+    .btn-number {
+        background: #f1f1f1;
+        padding: .7rem 1.5rem;
+        border: none;
+        border-bottom: 2px solid #555;
+        border-radius: 5px;
+        color: #555;
+        font-size: 1.3rem;
+        font-weight: 700;
+        width: 70px;
+        margin: .3rem;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #fff;
+        }
+    }
+
+    #clear {
+        background: #647299;
+        border-bottom: 2px solid #3e4a6b;
+        color: #fff;
+        cursor: pointer;
+
+        &:hover {
+            background-color: #94a2ca;
+        }
+    }
+
+    .next-buttom {
+        background-color: #252d44;
+        display: inline-flex;
+        width: 100%;
+
+        .reset {
+            width: 47%;
+            background: hsl(225, 21%, 49%);
+            padding: .8rem 1.5rem;
+            border: none;
+            border-bottom: 2px solid hsl(224, 28%, 35%);
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 800;
+            margin: .3rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #94a2ca;
+            }
+        }
+    
+        .igual {
+            width: 50%;
+            background: #d13f3d;
+            padding: .8rem 1.5rem;
+            border: none;
+            border-bottom: 2px solid #b6251e;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 1.5rem;
+            font-weight: 800;
+            margin: .3rem;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #d06563;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    body.active1 {
+        .botones {
+            .btn-number {
+                border-bottom: 4px solid hsl(35, 11%, 61%);
+            }
+
+            #clear {
+                border-bottom: 4px solid hsl(185, 58%, 25%);
+            }
+
+            .next-buttom {
+                .reset {
+                    border-bottom: 4px solid hsl(185, 58%, 25%);
+                }
+                .igual {
+                    border-bottom: 4px solid hsl(25, 99%, 27%);
+                }
+            }
+        }
+    }
+
+    body.active2 {
+        .botones {
+            .btn-number {
+                border-bottom: 4px solid  hsl(290, 70%, 36%);
+            }
+
+            #clear {
+                border-bottom: 4px solid hsl(285, 91%, 52%);
+            }
+
+            .next-buttom {
+                .reset {
+                    border-bottom: 4px solid hsl(285, 91%, 52%);
+                }
+                .igual {
+                    border-bottom: 4px solid hsl(177, 92%, 70%);
+                }
+            }
+        }
+    }
+    
+    .display {
+        padding: 40px 20px;
+        margin: 40px 0;
+        font-size: 3rem;
+    }
+    
+    .botones {
+        width: 80vw;
+        height: 58vh;
+        padding: 1rem;
+
+        .btn-number {
+            width: 21.5%;
+            margin: .3rem;
+            padding: 1rem;
+            height: 4.5rem;
+            font-size: 2rem;
+            border-bottom: 4px solid;
+        }
+
+        #clear {
+            font-size: 1.8rem;
+            border-bottom: 4px solid hsl(224, 28%, 35%);
+        }
+
+        .next-buttom {
+            height: 18%;
+
+            .reset {
+                font-size: 1.5rem;
+                border-bottom: 4px solid hsl(224, 28%, 35%);
+            }
+
+            .igual {
+                font-size: 1.5rem;
+                border-bottom: 4px solid hsl(6, 70%, 34%);
+            }
+        }
+    }
+
+}
